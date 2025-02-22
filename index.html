@@ -1,48 +1,77 @@
-<html>
-<body style="background-color:#40A2E3;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mauricio Saavedra - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Styling for the header */
+        header {
+            background-color: #002f6c;
+            color: white;
+            padding: 20px 30px; /* Adjusted padding to px */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
 
-<table style="height: 41px; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 55.8281px;">
-<p><a title="Home" href="https://mauriciosaavedra952.github.io/DIY/" target="_blank" rel="noopener"><img src="images/Caledonia.png" alt="Home" width="100" height="100" /></a></p>
-</td>
-<td style="width: 553.172px; text-align: center;">
-<h2><strong><span style="color: #ff6600;">Mauricio's page</span></strong></h2>
-</td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr style="border-color: black; background-color: #86bbf0;">
-<td>Home</td>
-<td>About</td>
-<td>Projects</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<table style="width: 100%;">
-<tbody>
-<tr style="height: 250px;">
-<td><p><a title="Esta es la página con proyectos" href="projects.html"><strong><span style="color: #0000ff;">Projects</span></strong></a></p></td>
-<td>Homework2</td>
-</tr>
-<tr style="height: 250px;">
-<td>Homework3</td>
-<td>Homework4</td>
-</tr>
-<tr style="height: 250px;">
-<td>Homework5</td>
-<td>Homework6</td>
-</tr>
-<tr style="height: 250px;">
-<td style="text-align: center;" colspan="2">Homework7&nbsp;</td>
-</tr>
-</tbody>
-</table>
+        .logo-title {
+            display: flex;
+            align-items: center;
+            margin-left: 30px; /* Adjusted margin to px */
+        }
+
+        .logo {
+            max-height: 50px; /* Adjusted logo size to fixed px */
+            margin-right: 20px; /* Adjusted margin to px */
+            cursor: pointer;
+        }
+
+        .title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px; /* Set a fixed font size */
+            font-weight: bold;
+        }
+
+        /* Navigation Styles (Horizontal) */
+        nav {
+            margin-right: 30px; /* Adjusted margin to px */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px; /* Adjusted margin to px */
+            padding: 10px 20px; /* Adjusted padding to px */
+            display: inline-block; /* Horizontal alignment */
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-size: 16px; /* Adjusted font size to px */
+            font-family: 'Oswald', sans-serif; /* Use Oswald font */
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-title">
+            <!-- Logo with click action to return to the homepage -->
+            <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
+            <span class="title">CMU Design and Fabrication</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
 </body>
 </html>
