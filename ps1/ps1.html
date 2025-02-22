@@ -59,9 +59,6 @@
 <style>
 
   #slider-container {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
     position: relative;
     width: 500px; /* Adjust as needed */
     height: 300px; /* Adjust as needed */
@@ -121,7 +118,7 @@
     </header>
 
     
-<div id="slider-container">
+<div id="slider-container" style="text-align:center;">
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <h1>Project 1: Credit card cup holder</h1>
@@ -130,11 +127,10 @@
   <img class="slide active" src="Saavedra_Mauricio_ps1_101_product.jpg" alt="Image 1">
   <img class="slide" src="Saavedra_Mauricio_ps1_102_product.jpg" alt="Image 2">
   <img class="slide" src="Saavedra_Mauricio_ps1_103_product.jpg" alt="Image 3">
+
+    <button id="prev-btn">Previous</button>
+    <button id="next-btn">Next</button>
   </div>
-
-<button id="prev-btn">Previous</button>
-<button id="next-btn">Next</button>
-
 <script>
   const slides = document.querySelectorAll('.slide');
   const prevBtn = document.getElementById('prev-btn');
