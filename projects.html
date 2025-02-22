@@ -1,7 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Flipping Cards</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mauricio Saavedra - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Styling for the header */
+        header {
+            background-color: #002f6c;
+            color: white;
+            padding: 20px 30px; /* Adjusted padding to px */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            margin-left: 30px; /* Adjusted margin to px */
+        }
+
+        .logo {
+            max-height: 50px; /* Adjusted logo size to fixed px */
+            margin-right: 20px; /* Adjusted margin to px */
+            cursor: pointer;
+        }
+
+        .title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px; /* Set a fixed font size */
+            font-weight: bold;
+        }
+
+        /* Navigation Styles (Horizontal) */
+        nav {
+            margin-right: 30px; /* Adjusted margin to px */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px; /* Adjusted margin to px */
+            padding: 10px 20px; /* Adjusted padding to px */
+            display: inline-block; /* Horizontal alignment */
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-size: 16px; /* Adjusted font size to px */
+            font-family: 'Oswald', sans-serif; /* Use Oswald font */
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
+        }
+    </style>
+  
 <style>
 .card-container {
   display: flex; /* Makes the cards arrange horizontally */
@@ -71,6 +126,21 @@
 </style>
 </head>
 <body>
+  <center>
+    <header>
+        <div class="logo-title">
+            <!-- Logo with click action to return to the homepage -->
+            <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
+            <span class="title">CMU Design and Fabrication</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+  </center>
 <div class="card-container">
   <table>
   <tr>
