@@ -55,6 +55,19 @@
     text-decoration: none;
     color: inherit;
 }
+
+    .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+  }
 </style>
 </head>
 <body>
@@ -66,7 +79,10 @@
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <img src="ps1/Saavedra_Mauricio_ps1_101_product.jpg" alt="Image 1" style="width: 300px;height: 200px;">
-        <h2>Problem Set 1</h2>
+        <div class="text-overlay">
+          <h2>Problem Set 1</h2>
+        </div>
+        
       </div>
       <div class="flip-card-back">
         <a href="ps1.html">Click to go to PS 1</a>
