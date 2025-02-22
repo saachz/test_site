@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mauricio Saavedra - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Styling for the header */
+        header {
+            background-color: #002f6c;
+            color: white;
+            padding: 20px 30px; /* Adjusted padding to px */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            margin-left: 30px; /* Adjusted margin to px */
+        }
+
+        .logo {
+            max-height: 50px; /* Adjusted logo size to fixed px */
+            margin-right: 20px; /* Adjusted margin to px */
+            cursor: pointer;
+        }
+
+        .title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px; /* Set a fixed font size */
+            font-weight: bold;
+        }
+
+        /* Navigation Styles (Horizontal) */
+        nav {
+            margin-right: 30px; /* Adjusted margin to px */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px; /* Adjusted margin to px */
+            padding: 10px 20px; /* Adjusted padding to px */
+            display: inline-block; /* Horizontal alignment */
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-size: 16px; /* Adjusted font size to px */
+            font-family: 'Oswald', sans-serif; /* Use Oswald font */
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
+        }
+    </style>
+<style>
+
+  #slider-container {
+    position: relative;
+    width: 750px; /* Adjust as needed */
+    height: 500px; /* Adjust as needed */
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Smooth transition */
+  }
+
+  .slide.active {
+    opacity: 1; /* Shown when active */
+  }
+
+  #prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1; /* Ensure buttons are above images */
+  }
+
+  #prev-btn {
+    left: 10px;
+  }
+
+  #next-btn {
+    right: 10px;
+  }
+</style>
+  
+</head>
+<body>
+
+    <header>
+        <div class="logo-title">
+            <!-- Logo with click action to return to the homepage -->
+            <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
+            <span class="title">CMU Design and Fabrication</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    
+<center>
+
+    <p>&nbsp;</p>
+    <h1>Project 1: Credit card cup holder</h1>
+    <p>&nbsp;</p>
+<table>
+  <tr>
+  <td>
+  <div id="slider-container">
+    <img class="slide active" src="ps1/Saavedra_Mauricio_ps1_101_product.jpg" alt="Image 1">
+    <img class="slide" src="ps1/Saavedra_Mauricio_ps1_102_product.jpg" alt="Image 2">
+    <img class="slide" src="ps1/Saavedra_Mauricio_ps1_103_product.jpg" alt="Image 3">
+
+    <button id="prev-btn">&lt;&lt;</button>
+    <button id="next-btn">&gt;&gt;</button>
+  </div>
+  </td>
+    <td>
+<p>This is the description of the project. This is the description of the project. This is the description of the project. This is the description of the project.</p>
+    </td>
+</tr>
+</table>
+</center>
+    
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  let currentSlide = 0;
+  let intervalId;
+
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (n + slides.length) % slides.length; // Handle wrapping
+    slides[currentSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+    resetInterval();
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+    resetInterval();
+  }
+
+  function startInterval() {
+    intervalId = setInterval(nextSlide, 3000); // 3 seconds
+  }
+  
+  function resetInterval(){
+      clearInterval(intervalId);
+      startInterval();
+  }
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  startInterval(); // Start automatic sliding
+
+</script>
+
+  
+</body>
+</html>
